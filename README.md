@@ -37,8 +37,8 @@ Dash prediction prototype
 | `data_cleaning.ipynb` | Exploratory analysis and dataset preparation |
 | `word_embedding.ipynb` | Feature engineering and model training/comparison |
 | `dashboard.py` | Dash prediction interface |
-| `models_export/` | Serialized model and encoders |
-| `cleaned_drug_side_effects.csv` / `df.csv` | Processed data included with the original project |
+| `models_export/` | Feature encoders and label mappings (large trained model available in the original repository) |
+| `cleaned_drug_side_effects.csv` / `df.csv` | Processed data available in the original repository, not mirrored here |
 | `model_comparison.png` | Reported model-comparison visualization |
 
 ## Getting started
@@ -53,9 +53,9 @@ pip install -r requirements.txt
 python dashboard.py
 ```
 
-Open http://127.0.0.1:8050/ locally.
+**Before launching:** download `models_export/best_model.pkl` from the original team repository. The app cannot make predictions without this trained model. Then open http://127.0.0.1:8050/ locally.
 
-**Reproducibility limitations:** The initial source datasets required by `Fusionetconcat.py` are not all stored in this portfolio repository. The notebooks may require data paths or dependencies to be adapted to your environment. The dashboard uses pickle model files; load them only from trusted sources. The original dashboard code contains a "Top 500" UI label that is inconsistent with the README's top-300 description; check the actual exported model labels before making conclusions.
+**Reproducibility limitations:** The initial source datasets required by `Fusionetconcat.py` are not all stored in this portfolio repository. The notebooks may require data paths or dependencies to be adapted to your environment. The large trained model (`models_export/best_model.pkl`) and processed CSV datasets (`df.csv`, `cleaned_drug_side_effects.csv`) are not included in this portfolio copy. To run the dashboard, obtain the trained model artifact from the [original project repository](https://github.com/Mascode-Dev/drug-side-effect) and place it under `models_export/`. To reproduce the data pipeline, obtain the licensed original datasets. Load pickle files only from sources you trust. The original dashboard code contains a "Top 500" UI label that is inconsistent with the README's top-300 description; check the actual exported model labels before making conclusions.
 
 ## My contribution — Ghita Fadili
 
